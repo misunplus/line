@@ -1,0 +1,15 @@
+sass --watch -E UTF-8 style.scss:style.css
+
+sass --watch -E UTF-8 app.scss:app.css
+
+
+
+
+sass --watch -E UTF-8 style.scss:style.css --style compac
+sass --watch -E UTF-8 app.scss:app.css --style compac
+sass --watch -E UTF-8 main.scss:main.css --style compac
+
+sass --watch -E UTF-8 dnld.scss:dnld.css --style compac
+sass --watch -E UTF-8 game.scss:game.css --style compac
+
+sass --watch -E UTF-8 store.scss:store.css --style compac

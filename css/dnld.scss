@@ -1,0 +1,402 @@
+@charset "utf-8";
+
+body {
+	height: 100%;
+	font-weight: normal;
+	color: inherit;
+}
+
+#wrap {
+	height: 100%;
+
+	/* background-color: red; */
+}
+
+/* 해더 */
+
+header {
+	position: fixed;
+	width: 100%;
+	height: 65px;
+	background-color: #fff;
+	border-bottom: 3px solid black;
+	z-index: 1000;
+
+	> .section-width {
+		display: flex;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 1040px;
+		flex-flow: nowrap row;
+		justify-content: center;
+
+		> a {
+			transform: translate(0, -15%);
+			&:after {
+				display: block;
+				width: 75px;
+				height: 25px;
+				background: url(./../images/main/logo160629.png) no-repeat;
+				background-size: 65px 20px;
+				transform: translate(0, 125%);
+				content: '';
+			}
+
+			> h1 {
+				position: absolute;
+				left: -9999px;
+			}
+		}
+
+		.main-nav {
+			width: 70%;
+			line-height: 65px;
+
+			> .gnb {
+				display: flex;
+
+				> li {
+					height: 65px;
+					&.active {
+						font-weight: 600;
+					}
+					> a {
+						font-size: 13px;
+						color: gray;
+						padding-right: 10px;
+						margin-left: 10px;
+						border-right: 1px solid gray;
+					}
+				}
+			}
+		}
+
+		.language {
+			position: relative;
+			margin-top: 21px;
+			width: 135px;
+			> p {
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 22px;
+				width: 100%;
+				padding-left: 5px;
+
+				border: 1px solid gray;
+
+				line-height: 22px;
+				font-size: 10px;
+
+				&::before {
+					position: absolute;
+					left: 125px;
+					top: 9px;
+					display: block;
+					width: 6px;
+					height: 4px;
+					background-image: url(./../images/main/spritePC200706.png);
+					background-position: -897px 0;
+					content: '';
+				}
+			}
+			> .tab {
+				position: absolute;
+				height: 22px;
+				width: 140px;
+				color: gray;
+				display: flex;
+				z-index: 1200;
+				> .tap-content {
+					width: 270px;
+					top: 24px;
+
+					display: flex;
+
+					> ul {
+						background-color: #fff;
+						border: 1px solid grey;
+						position: absolute;
+						padding: 5px 0 0 0;
+						height: 250px;
+						top: 23px;
+						> li {
+							> a {
+								display: block;
+								width: 130px;
+								margin: 0 5px 0 5px;
+								line-height: 22px;
+								font-size: 10px;
+							}
+						}
+						&:first-child {
+							right: 135px;
+						}
+						&:last-child {
+							right: -2px;
+						}
+					} //ul
+				} //tab content
+			} //tap
+		}
+	}
+}
+
+.tap-content > ul > li.active > a,
+.tap-content > ul > li:hover > a {
+	font-weight: 600;
+	color: green;
+}
+
+section {
+	width: 100%;
+
+	h2 {
+		position: absolute;
+		left: -9999px;
+	}
+	.view-main {
+		padding-top: 65px;
+		width: 960px;
+		margin: 0 auto;
+		> .gnb {
+			// outline: 1px solid red;
+
+			> li {
+				display: flex;
+				margin-top: 50px;
+				padding-bottom: 50px;
+				border-bottom: 1px solid gray;
+				> .logo-img {
+					margin-right: 50px;
+					// outline: 1px solid red;
+				}
+				> .text {
+					width: 715px;
+					vertical-align: top;
+					// outline: 1px solid red;
+					h3 {
+						margin-top: 30px;
+						font-size: 40px;
+						a {
+							display: inline-block;
+							text-indent: -9999px;
+							// outline: 1px solid red;
+							&:after {
+								position: relative;
+								top: -45px;
+								display: block;
+								content: '';
+								width: 20px;
+								height: 20px;
+								background: url(./../images/dnld/spritePC200706.png);
+								background-position: -995px 0;
+							}
+						}
+						a {
+							text-indent: -9999px;
+						}
+					}
+					p {
+						margin-top: 15px;
+						font-size: 14px;
+						line-height: 1.5;
+					}
+					ul {
+						display: flex;
+						margin-top: 18px;
+
+						li {
+							margin-right: 6px;
+							&:nth-child(2) > a {
+								padding: 0 70px 0 10px;
+							}
+							a {
+								display: inline-block;
+								height: 26px;
+								padding: 0 44px 0 10px;
+								color: #fff;
+								font-size: 12px;
+
+								line-height: 26px;
+								background: gray url(./../images/dnld/ico_Link.png) no-repeat;
+								background-position: right 0px;
+								border: 1px solid gray;
+								box-sizing: border-box;
+							}
+						}
+					}
+				}
+			} //lnb
+		} //gnb
+
+		> .bottom-list {
+			display: inline-block;
+			// outline: 1px solid red;
+			&::after {
+				display: block;
+				clear: both;
+				content: '';
+			}
+
+			> li {
+				width: 48%;
+				float: left;
+
+				margin-top: 25px;
+				margin-left: 2%;
+				padding-bottom: 50px;
+				// outline: 1px solid green;
+				> .logo-img {
+					width: 20%;
+					display: inline-block;
+					margin-right: 20px;
+					// outline: 1px solid red;
+				}
+				> .text {
+					width: 70%;
+					display: inline-block;
+
+					vertical-align: top;
+					// outline: 1px solid red;
+					h3 {
+						margin-top: 10px;
+						font-size: 14px;
+						a {
+							display: inline-block;
+							text-indent: -9999px;
+							// outline: 1px solid red;
+							&:after {
+								position: relative;
+								margin-left: 5px;
+								top: -17px;
+								display: block;
+								content: '';
+								width: 16px;
+								height: 16px;
+								background: url(./../images/dnld/spritePC200706.png) no-repeat;
+								background-size: 1549px 203px;
+								background-position: -880px 0;
+							}
+						}
+						a {
+							text-indent: -9999px;
+						}
+					}
+					p {
+						font-size: 12px;
+						line-height: 1.6;
+					}
+					ul {
+						display: flex;
+						margin-top: 18px;
+
+						li {
+							margin-right: 6px;
+							&:nth-child(2) > a {
+								padding: 0 70px 0 10px;
+							}
+							a {
+								display: inline-block;
+								height: 26px;
+								padding: 0 44px 0 10px;
+								color: #fff;
+								font-size: 12px;
+
+								line-height: 26px;
+								background: gray url(./../images/dnld/ico_Link.png) no-repeat;
+								background-position: right 0px;
+								border: 1px solid gray;
+								box-sizing: border-box;
+							}
+						}
+					}
+				}
+			} //lnb
+		} //gnb
+	} //view-main
+}
+
+// 풋터
+
+footer {
+	width: 100%;
+
+	background-color: #3b3b3b;
+	> h3 {
+		position: absolute;
+		left: -9999px;
+	}
+	.foot_wrap {
+		width: 960px;
+		margin: 0 auto;
+		padding: 26px 0 28px;
+		> .page_link {
+			> ul {
+				display: flex;
+				flex-flow: wrap row;
+				color: #83827a;
+				font-size: 12px;
+				line-height: 1.5;
+				> li:first-child {
+					> a {
+						padding-left: 0;
+					}
+				}
+				> li {
+					> a {
+						padding: 0 8px;
+						color: #83827a;
+					}
+				}
+			}
+		}
+
+		> .md_link {
+			> ul {
+				*zoom: 1;
+				&::after {
+					display: block;
+					clear: both;
+					content: '';
+				}
+
+				> li {
+					float: left;
+					width: 28px;
+					height: 28px;
+					margin: 20px 20px 20px 0;
+
+					&:first-child {
+						> a {
+							display: block;
+							width: 100%;
+							height: 100%;
+							text-indent: -9999px;
+							background: url(./../images/main/spritePC200706.png) no-repeat;
+							background-size: cover cover;
+							background-position: -1050px -3px;
+						}
+					}
+					&:last-child {
+						> a {
+							display: block;
+							width: 100%;
+							height: 100%;
+							text-indent: -9999px;
+							background: url(./../images/main/spritePC200706.png) no-repeat;
+							background-size: cover cover;
+							background-position: -818px -1px;
+						}
+					}
+				}
+			}
+		} //md-link
+		p {
+			color: #83827a;
+			font-size: 12px;
+			font-weight: 800;
+		}
+	} //foot-wap
+} //foot
