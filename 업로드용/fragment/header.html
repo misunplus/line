@@ -1,0 +1,74 @@
+<?
+    header("Expires: Tue, 03 Jul 2001 06:00:00 GMT");
+    header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Cache-Control: post-check=0, pre-check=0", false);
+    header("Pragma: no-cache");
+    header("Connection: close");
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네이버라인</title>
+  <link rel="stylesheet" href="http://<?=$_SERVER['SERVER_NAME']?>/css/reset.css">
+
+  <link rel="stylesheet" href="http://<?=$_SERVER['SERVER_NAME']?>/css/style.css">
+
+  <script src="http://<?=$_SERVER['SERVER_NAME']?>/js/jquery-1.12.4.min.js"></script>
+
+  <script src="http://<?=$_SERVER['SERVER_NAME']?>/js/function.js"></script>
+
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <div class="container">
+        <h1 class="logo"><a href="#">네이버라인</a></h1>
+        <nav>
+          <h2 class="sr-only">주요메뉴 바로가기</h2>
+          <ul class="gnb">
+            <li><a href="">무료메세지</a></li>
+            <li><a href="">무료통화</a></li>
+            <li><a href="">LINE 스티커</a></li>
+            <li><a href="">라인공유</a></li>
+            <li><a href="">인기쿠폰</a></li>
+            <li><a href="">타임라인</a></li>
+          </ul>
+        </nav>
+        <form action="#" class="opt">
+          <fieldset>
+            <legend>주언어 선택</legend>
+            <label for="lang">언어</label>
+            <input id="lang" type="text" readonly value="한국어">
+            <ul class="langlist clearfix">
+              <li><a href="#">日本語</a></li>
+              <li class="on"><a href="#">한국어</a></li>
+              <li><a href="https://line.me/en/">English</a></li>
+              <li><a href="#">English(US)</a></li>
+              <li><a href="#">中文(繁體)</a></li>
+              <li><a href="#">中文(简体)</a></li>
+              <li><a href="#">ภาษาไทย</a></li>
+              <li><a href="#">Bahasa Indonesia</a></li>
+              <li><a href="#">Ting Vit</a></li>
+              <li><a href="#">Português</a></li>
+              <li><a href="#">Melayu</a></li>
+              <li><a href="#">Español(España)</a></li>
+              <li><a href="#">Hindi</a></li>
+              <li><a href="#">Español(latinoamérica)</a></li>
+              <li><a href="#">Türkçe</a></li>
+              <li><a href="#">Español(Argentina)</a></li>
+              <li><a href="#">Русский</a></li>
+              <li><a href="#">Italiano</a></li>
+              <li><a href="#">Deutsch</a></li>
+              <li><a href="#">Français</a></li>
+
+            </ul>
+          </fieldset>
+        </form>
+      </div>
+    </header>

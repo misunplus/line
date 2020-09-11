@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>파일 분기</title>
+	<script>
+		//아래 코드를 이해하기 위한 연습공간
+		let str = "The quick brown Fox jumps over Fox the lazy Dog";
+		str = str.toLowerCase(); //소문자로 변환
+		console.log(str);
+
+		//특정(Fox)단어의 첫번째 시작 위치 찾기
+		//못찾으면 또는 없으면 -1 리턴
+		const loc = str.indexOf('fox');
+		console.log(loc);
+
+	</script>
+	<script>
+		// console.log(window);
+		// console.log(navigator);
+		// console.log(navigator.userAgent);
+		// console.log(navigator.userAgent.toLowerCase());
+
+		// //접속자의 브라우저 정보
+		// const uAgent = navigator.userAgent.toLowerCase();
+		// console.log(uAgent.indexOf('chrome'));
+
+		const uAgent = navigator.userAgent.toLowerCase(); //유저 접속 정보를 가져와서 소문자로
+		console.log(uAgent.indexOf('chrome')); //가지고온 유저 정보중에 크롬을 찾는다
+
+		// //모바일 브라우저의 닉네임 종류
+		// const mobileList = ['iphone', 'ipod', 'android', 'blackberry', 'windows ce',
+		// 	'nokia', 'webos', 'opera mini', 'sonyericsson', 'opera mobi', 'iemobile', 'avantgo', 'bada', 'blazer', 'compal', 'iemobile', 'iris', 'lge', 'windows phone'];
+
+
+		//유저 정보와 비교할 모바일 기기
+		const mobileList = ['iphone', 'ipod', 'android', 'blackberry', 'windows ce',
+			'nokia', 'webos', 'opera mini', 'sonyericsson', 'opera mobi', 'iemobile', 'avantgo', 'bada', 'blazer', 'compal', 'iemobile', 'iris', 'lge', 'windows phone']
+
+
+		// let userDevice = 'pc';
+		let userDevice = 'pc'; //모바일 기기와 비교할 유저의 기기정보 기본값은 pc
+		// //브라우저 정보를 모바일 리스트와 대조작업
+		// for (let i = 0; i < mobileList.length; i++) {
+		// 	if (uAgent.indexOf(mobileList[i]) !== -1) {
+		// 		userDevice = "mobile"
+		// 	}
+		// }
+
+		for (let i = 0; i < mobileList.length; i++) {
+			//유저정보안에 모바일기기정보가 있는지 확인
+			// 없으면 -1
+			if (uAgent.indexOf(mobileList[i]) !== -1) {
+				userDevice = "mobile"
+			}
+		}
+
+		console.log(userDevice);
+		alert(userDevice);
+
+		// if (userDevice === "mobile") {
+		// 	document.location = 'line-mo.html';
+
+		// } else {
+		// 	document.location = 'line-pc.html';
+
+		if (userDevice === 'mobile') {
+			document.location = 'line-mo.html'
+		} else {
+			document.location = 'line-pc.html'
+
+		}
+		// }
+	</script>
+</head>
+
+<body>
+	<h1 class="text-center">적응형</h1>
+</body>
+
+</html>
